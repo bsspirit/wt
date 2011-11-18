@@ -65,11 +65,11 @@ class Message extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'name' => '用户名',
 			'email' => 'Email',
-			'content' => 'Content',
-			'create_date' => 'Create Date',
-			'ip' => 'Ip',
+			'content' => '留言内容',
+			'create_date' => '创建时间',
+			'ip' => 'IP地址',
 			'mark' => 'Mark',
 		);
 	}
