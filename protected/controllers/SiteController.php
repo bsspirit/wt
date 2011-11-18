@@ -43,6 +43,8 @@ class SiteController extends Controller
 	 */
 	public function actionWiki($id){
 		$model=Wiki::model()->findByPk($id);
+		$prev = Wiki::model()->findByPk(($id-1));
+		$next = Wiki::model()->findByPk(($id+1));
 		
 		$stat = WikiStat::model()->find('wkid=:wkid and operate=:op',array(':wkid'=>$id,':op'=>'pv'));
 		if(empty($stat)){
@@ -55,13 +57,6 @@ class SiteController extends Controller
 			$stat->count = $stat->count+1;
 			$stat->save();	
 		}
-		
-		
-		
-		
-		$prev = Wiki::model()->findByPk(($id-1));
-		$next = Wiki::model()->findByPk(($id+1));
-		
 		$this->render('wiki',array(
 			'model'=>$model,
 			'stat'=>$stat,
