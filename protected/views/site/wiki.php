@@ -1,6 +1,6 @@
 <?php 
 $basepath=Yii::app()->request->baseUrl;
-$this->pageTitle=Yii::app()->name . ' - 白茶知识库';
+$this->pageTitle=Yii::app()->name . ' - 白茶百科';
 $this->page = 'wiki';
 ?> 
 <h1>白茶知识库</h1>

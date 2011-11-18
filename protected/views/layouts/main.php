@@ -94,14 +94,14 @@
 				<div class="sidebox">	
 					<h1 class="clear">实景照片</h1>
 					<ul class="sidemenu">
-						<li><a href="/photo#p1" class="top">海拔800米茶山</a></li>
-						<li><a href="/photo#p2">自家千亩茶园</a></li>
-						<li><a href="/photo#p3">漂亮的采茶大姐</a></li>
-						<li><a href="/photo#p4">白茶树</a></li>
-						<li><a href="/photo#p5">刚采的鲜茶</a></li>
-						<li><a href="/photo#p6">炒茶工房</a></li>				
-						<li><a href="/photo#p7">成品干茶</a></li>
-						<li><a href="/photo#p8">精品礼盒</a></li>
+						<li><a href="/site/photo#p1" class="top">海拔800米茶山</a></li>
+						<li><a href="/site/photo#p2">自家千亩茶园</a></li>
+						<li><a href="/site/photo#p3">漂亮的采茶大姐</a></li>
+						<li><a href="/site/photo#p4">白茶树</a></li>
+						<li><a href="/site/photo#p5">刚采的鲜茶</a></li>
+						<li><a href="/site/photo#p6">炒茶工房</a></li>				
+						<li><a href="/site/photo#p7">成品干茶</a></li>
+						<li><a href="/site/photo#p8">精品礼盒</a></li>
 					</ul>
 				</div>
 			
