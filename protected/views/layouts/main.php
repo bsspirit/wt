@@ -1,20 +1,26 @@
+<?php $basepath=Yii::app()->request->baseUrl; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en" />
-
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="zh" />
+	<meta http-equiv="title" content="安吉高山白茶" />
+	<meta name="description" content="安吉高山白茶,安吉白茶,高山白茶,白茶,千亩茶园,自家茶园" />
+	<meta name="keywords" content="安吉高山白茶,安吉白茶,高山白茶,白茶,千亩茶园,自家茶园" />
+	<meta name="author" content="Conan Zhang - bsspirit@gmail.com" />
+	<meta name="classification" content="安吉高山白茶" />
+	<meta name="copyright" content="安吉高山白茶" />
+	<meta name="Robots" content="all" />
 	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $basepath ?>/css/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $basepath ?>/css/print.css" media="print" />
 	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $basepath ?>/css/ie.css" media="screen, projection" />
 	<![endif]-->
-
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
+	<link rel="stylesheet" type="text/css" href="<?php echo $basepath ?>/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $basepath ?>/css/form.css" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<script src="<?php echo $basepath ?>/js/jquery-1.5.1.min.js" type="text/javascript"></script>
 </head>
 
 <body>
