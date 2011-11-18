@@ -63,9 +63,9 @@ class WikiStat extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'wkid' => 'Wkid',
-			'count' => 'Count',
-			'operate' => 'Operate',
+			'wkid' => '百科ID',
+			'count' => '计数',
+			'operate' => '操作',
 		);
 	}
 

@@ -71,14 +71,14 @@ class Wiki extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'name' => '作者',
 			'email' => 'Email',
-			'title' => 'Title',
-			'content' => 'Content',
-			'image' => 'Image',
-			'repost' => 'Repost',
-			'create_date' => 'Create Date',
-			'ip' => 'Ip',
+			'title' => '标题',
+			'content' => '正文',
+			'image' => '图片',
+			'repost' => '转发地址',
+			'create_date' => '创建时间',
+			'ip' => 'IP地址',
 			'mark' => 'Mark',
 		);
 	}
