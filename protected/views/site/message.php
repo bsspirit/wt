@@ -16,7 +16,7 @@ $this->page = 'message';
 		用户名:<?php echo $form->textField($model,'name',array('size'=>16,'maxlength'=>16,'style'=>'width:230px;')); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		E-mail:<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>64,'style'=>'width:230px;')); ?>
 		</p>
-		<p><?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50, 'style'=>'width:550px;')); ?></p>
+		<p><?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50, 'style'=>'width:580px;')); ?></p>
 		<p><input type="submit" value="发布"/></p>
 		<?php $this->endWidget(); ?>
 	</div>
