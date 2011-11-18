@@ -1,4 +1,6 @@
 User-agent: *
-Allow: /
-Sitemap: http://100rmb.info/sitemap.xml
+Disallow: /admin/
+Disallow: /upfiles/
+
+Sitemap: http://www.100rmb.info/sitemap.xml
 
