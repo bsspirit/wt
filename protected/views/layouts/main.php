@@ -49,18 +49,21 @@
 		</div>
 	</div>
 	
-	<?php if($this->page == 'index'){?>
+	
 	<div class="marquee">
-    <ul>
-        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header1.jpg"/></a></li>
-        <li style="display:none;"><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header2.jpg"/></a></li>
-        <li style="display:none;"><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header3.jpg"/></a></li>
-        <li style="display:none;"><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header4.jpg"/></a></li>
-    </ul>
+		<img class="headerphoto" src="<?php echo $basepath ?>/css/header1.jpg"/>
     </div>
+    
+    <?php if($this->page == 'index'){?>
 	<script src="<?php echo $basepath ?>/js/flash/jcarousellite_1.0.1.pack.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(function() {
+			var marq = '<ul><li style="display:none;"><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header1.jpg"/></a></li>\
+					        <li style="display:none;"><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header2.jpg"/></a></li>\
+					        <li style="display:none;"><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header3.jpg"/></a></li>\
+					        <li style="display:none;"><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header4.jpg"/></a></li>\
+					    </ul>';
+			$(".marquee").html(marq);
 			$(".marquee li").show();
 		    $(".marquee").jCarouselLite({
 		        auto: 4000,
@@ -69,10 +72,6 @@
 		    });
 		});
 	</script>
-	<?php } else { ?>
-	<div class="marquee">
-	    <a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header1.jpg"/></a>
-    </div>
 	<?php } ?>
 	
 	<div id="content-wrap">
