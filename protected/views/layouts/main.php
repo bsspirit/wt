@@ -85,18 +85,18 @@
 			<div class="col float-left">
 				<h1>合作网站</h1>
 				<ul>				
-					<li><a href="http://bsspirit.taobao.com"><b>淘宝网</b> - 淘！我喜欢</a></li>
-					<li><a href="http://weibo.com/dotabook"><b>新浪微博</b> - 分享身边的新鲜事儿</a></li>			
-					<li><a href="http://www.woju230.com"><b>蜗聚团</b> - 生活家居团购专家</a></li>
+					<li><a href="http://bsspirit.taobao.com" target="_blank"><b>淘宝网</b> - 淘！我喜欢</a></li>
+					<li><a href="http://weibo.com/dotabook" target="_blank"><b>新浪微博</b> - 分享身边的新鲜事儿</a></li>			
+					<li><a href="http://www.woju230.com" target="_blank"><b>蜗聚团</b> - 生活家居团购专家</a></li>
 				</ul>			
 			</div>
 			
 			<div class="col float-left">
 				<h1>友情链接</h1>
 				<ul>				
-					<li><a href="http://www.baicha.cn">安吉白茶官方网站</a></li>
-					<li><a href="http://www.fywhitetea.com">芳羽牌安吉白茶</a></li>
-					<li><a href="http://www.ttccn.com">茶博园</a></li>
+					<li><a href="http://www.baicha.cn" target="_blank">安吉白茶官方网站</a></li>
+					<li><a href="http://www.fywhitetea.com" target="_blank">芳羽牌安吉白茶</a></li>
+					<li><a href="http://www.ttccn.com" target="_blank">茶博园</a></li>
 				</ul>			
 			</div>		
 		
@@ -104,7 +104,7 @@
 				<p>&copy; Copyright 2011 <b><a href="/">安吉高山白茶</a></b><br/></p>
 				<ul>						
 					<li><a href="/"><b>回到首页</b></a></li>
-					<li><a href="/sitemap"><b>站点地图</b></a></li>
+					<li><a href="/site/sitemap"><b>站点地图</b></a></li>
 					<li><a href="/site/login"><b>管理员</b></a></li>
 				</ul>	
 			</div>

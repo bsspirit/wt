@@ -85,6 +85,14 @@ class SiteController extends Controller
 		));
 	}
 	
+	/*
+	 * 站点地图
+	 */
+	public function actionSitemap(){
+		$this->render('sitemap',array(
+		));
+	}
+	
 	public function actionError()
 	{
 	    if($error=Yii::app()->errorHandler->error)
