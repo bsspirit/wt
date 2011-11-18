@@ -103,7 +103,7 @@ class Wiki extends CActiveRecord
 		$criteria->compare('repost',$this->repost,true);
 		$criteria->compare('create_date',$this->create_date,true);
 		$criteria->compare('ip',$this->ip,true);
-		$criteria->compare('mark',$this->mark);
+		$criteria->compare('mark',0);
 		$criteria->order='id desc';
 
 		return new CActiveDataProvider($this, array(
