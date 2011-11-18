@@ -36,6 +36,7 @@ class WikiStat extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('wkid', 'required'),
 			array('wkid, count', 'numerical', 'integerOnly'=>true),
 			array('operate', 'length', 'max'=>8),
 			// The following rule is used by search().
@@ -74,11 +75,16 @@ class WikiStat extends CActiveRecord
 	 */
 	public function search()
 	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
 		$criteria=new CDbCriteria;
+
 		$criteria->compare('id',$this->id);
 		$criteria->compare('wkid',$this->wkid);
 		$criteria->compare('count',$this->count);
 		$criteria->compare('operate',$this->operate,true);
+
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

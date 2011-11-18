@@ -42,12 +42,11 @@ class Wiki extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('name, email, title, content, create_date', 'required'),
 			array('mark', 'numerical', 'integerOnly'=>true),
-			array('name, title', 'length', 'max'=>16),
+			array('name, title, ip', 'length', 'max'=>16),
 			array('email', 'length', 'max'=>64),
 			array('image, repost', 'length', 'max'=>256),
-			array('ip', 'length', 'max'=>32),
-			array('content, create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, email, title, content, image, repost, create_date, ip, mark', 'safe', 'on'=>'search'),
@@ -114,4 +113,5 @@ class Wiki extends CActiveRecord
 			 ),
 		));
 	}
+
 }

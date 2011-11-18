@@ -69,10 +69,18 @@ class SiteController extends Controller
 	 * 留言板
 	 */
 	public function actionMessage(){
-		$model = new Message();
+		$msg=new Message;
+		if(isset($_POST['Message'])){
+			$msg->attributes=$_POST['Message'];
+			$msg->ip=$_SERVER['REMOTE_ADDR'];
+			$msg->save();
+		}
+		
+		$model=new Message();
 		$dataProvider = $model->search(10);
 		$this->render('message',array(
 			'dataProvider'=>$dataProvider,
+			'model'=>$msg,
 		));
 	}
 	

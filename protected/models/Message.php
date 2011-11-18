@@ -39,11 +39,10 @@ class Message extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('content, name, email', 'required'),
 			array('mark', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>16),
+			array('name, ip', 'length', 'max'=>16),
 			array('email', 'length', 'max'=>64),
-			array('ip', 'length', 'max'=>32),
-			array('content, create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, email, content, create_date, ip, mark', 'safe', 'on'=>'search'),
@@ -104,4 +103,5 @@ class Message extends CActiveRecord
 			 ),
 		));
 	}
+
 }
