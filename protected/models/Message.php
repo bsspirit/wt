@@ -40,6 +40,7 @@ class Message extends CActiveRecord
 			array('content, name, email', 'required'),
 			array('mark', 'numerical', 'integerOnly'=>true),
 			array('name, ip', 'length', 'max'=>16),
+			array('content','length','min'=>5),
 			array('email', 'length', 'max'=>64),
 			array('email','email'),
 			array('id, name, email, content, create_date, ip, mark', 'safe', 'on'=>'search'),
