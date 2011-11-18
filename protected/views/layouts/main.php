@@ -53,9 +53,9 @@
 	<div class="marquee">
     <ul>
         <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header1.jpg"/></a></li>
-        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header2.jpg"/></a></li>
-        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header3.jpg"/></a></li>
-        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header4.jpg"/></a></li>
+        <li><a href="#"><img class="headerphoto" style="display:hidden;" src="<?php echo $basepath ?>/css/header2.jpg"/></a></li>
+        <li><a href="#"><img class="headerphoto" style="display:hidden;" src="<?php echo $basepath ?>/css/header3.jpg"/></a></li>
+        <li><a href="#"><img class="headerphoto" style="display:hidden;" src="<?php echo $basepath ?>/css/header4.jpg"/></a></li>
     </ul>
     </div>
 	<script src="<?php echo $basepath ?>/js/flash/jcarousellite_1.0.1.pack.js" type="text/javascript"></script>
