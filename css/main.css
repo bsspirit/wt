@@ -64,7 +64,8 @@ input.button {margin: 0;font: bold 1em Arial, Sans-serif;background: #FFF url(gr
 #header-content li a#current{background: #65944A;color: #FFF;}
 
 /* header photo */
-#headerphoto {margin: 0 auto;width: 940px;height: 240px;padding: 15px 10px 10px 10px;background: #FFF url(header1.jpg) no-repeat center;}
+.marquee {margin: 5px auto;text-align: center;background: #FFF url(header1.jpg) no-repeat center;}
+.headerphoto{width: 930px;height: 240px;}
 
 /* content */
 #content-wrap {clear: both;float: left;width: 100%;}

@@ -5,7 +5,7 @@ $this->pageTitle=Yii::app()->name . ' - 首页';
 
 <div class="post">
 	<h1>白茶介绍</h1>
-	<p>作者 <a>张丹</a> <a href="#">bsspirit@gmail.com</a></p>
+	<p>作者:<a href="#">bsspirit@gmail.com</a></p>
 	<p><b>白茶树</b>原产地海拔800米左右，每年春茶幼嫩芽叶为白色，尤以一芽二叶开展时为最白，主脉呈绿色。 春茶成熟老叶由白逐渐转为白绿相间的花白色，夏秋茶均呈绿色。外形细秀，色绿润，香高持久，味鲜爽，不失为一种突出的创新名茶。 嫩叶洁白如玉，干茶翠绿金黄；入汤后，叶底玉白，主脉呈绿色，嫩香持久，滋味鲜醇，汤色鹅黄。</p>
 	<p><img width="600px" src="<?php echo $basepath?>/images/1.jpg" alt="安吉高山白茶" title="安吉高山白茶"/></p>
 	<p>佳节送礼，探亲访友，首选之茶。。。</p>
@@ -16,7 +16,7 @@ $this->pageTitle=Yii::app()->name . ' - 首页';
 
 <div class="post">
 	<h1>独特的白茶</h1>
-	<p>作者 <a>张丹</a> <a href="#">bsspirit@gmail.com</a></p>
+	<p>作者: <a href="#">bsspirit@gmail.com</a></p>
 	<p>
 		<p><b>安吉高山白茶的最大特点</b><br/>
 		1. 富含氨基酸：安吉白茶因其氨基酸含量高出一般茶一倍，为6.19%—6.92%，茶多酚10.7%。<br/>
