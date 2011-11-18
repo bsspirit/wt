@@ -1,22 +1,19 @@
 <?php
 
 /**
- * This is the model class for table "t_tea_message".
+ * This is the model class for table "t_tea_wiki_stat".
  *
- * The followings are the available columns in table 't_tea_message':
+ * The followings are the available columns in table 't_tea_wiki_stat':
  * @property integer $id
- * @property string $name
- * @property string $email
- * @property string $content
- * @property string $create_date
- * @property string $ip
- * @property integer $mark
+ * @property integer $wkid
+ * @property integer $count
+ * @property string $operate
  */
-class Message extends CActiveRecord
+class WikiStat extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
-	 * @return Message the static model class
+	 * @return WikiStat the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -28,7 +25,7 @@ class Message extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 't_tea_message';
+		return 't_tea_wiki_stat';
 	}
 
 	/**
@@ -39,14 +36,11 @@ class Message extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('mark', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>16),
-			array('email', 'length', 'max'=>64),
-			array('ip', 'length', 'max'=>32),
-			array('content, create_date', 'safe'),
+			array('wkid, count', 'numerical', 'integerOnly'=>true),
+			array('operate', 'length', 'max'=>8),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, email, content, create_date, ip, mark', 'safe', 'on'=>'search'),
+			array('id, wkid, count, operate', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,12 +62,9 @@ class Message extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'email' => 'Email',
-			'content' => 'Content',
-			'create_date' => 'Create Date',
-			'ip' => 'Ip',
-			'mark' => 'Mark',
+			'wkid' => 'Wkid',
+			'count' => 'Count',
+			'operate' => 'Operate',
 		);
 	}
 
@@ -81,27 +72,15 @@ class Message extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
-	public function search($page=10)
+	public function search()
 	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
-
 		$criteria=new CDbCriteria;
-
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('content',$this->content,true);
-		$criteria->compare('create_date',$this->create_date,true);
-		$criteria->compare('ip',$this->ip,true);
-		$criteria->compare('mark',0);
-		$criteria->order='id desc';
-
+		$criteria->compare('wkid',$this->wkid);
+		$criteria->compare('count',$this->count);
+		$criteria->compare('operate',$this->operate,true);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
-			'pagination'=>array(
-			    'pageSize'=>$page,
-			 ),
 		));
 	}
 }

@@ -5,6 +5,6 @@
 <li><a href="<?php echo $basepath?>/site/photo" <?php if($page=='photo'){echo 'id="current"';}?>>实景照片</a></li>
 <li><a href="<?php echo $basepath?>/site/consult" <?php if($page=='consult'){echo 'id="current"';}?>>购买咨询</a></li>
 <li><a href="<?php echo $basepath?>/site/message" <?php if($page=='message'){echo 'id="current"';}?>>留言板</a></li>
-<li><a href="<?php echo $basepath?>/site/wiki" <?php if($page=='wiki'){echo 'id="current"';}?>>白茶百科</a></li>
+<li><a href="<?php echo $basepath?>/site/wikis" <?php if($page=='wiki'){echo 'id="current"';}?>>白茶百科</a></li>
 <!--<li><a href="/about">关于本站</a></li>-->
 </ul>

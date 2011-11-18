@@ -20,7 +20,7 @@ $this->page = 'message';
 	<div class="view">
 		<?php $this->widget('zii.widgets.CListView', array(
 			'dataProvider'=>$dataProvider,
-			'itemView'=>'_view',
+			'itemView'=>'_view_msg',
 		)); ?>
 	</div>
 	

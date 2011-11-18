@@ -2,25 +2,6 @@
 
 class SiteController extends Controller
 {
-	/**
-	 * Declares class-based actions.
-	 */
-	public function actions()
-	{
-		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
-			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
-		);
-	}
-
 	
 	/*
 	 * 品味白茶
@@ -47,13 +28,45 @@ class SiteController extends Controller
 	}
 	
 	/*
-	 * 白茶知识库
+	 * 白茶百科列表
 	 */
-	public function actionWiki(){
+	public function actionWikis(){
 		$model = new Wiki();
 		$dataProvider = $model->search(30);
-		$this->render('wiki',array(
+		$this->render('wikis',array(
 			'dataProvider'=>$dataProvider,
+		));
+	}
+	
+	/*
+	 * 白茶百科 
+	 */
+	public function actionWiki($id){
+		$model=Wiki::model()->findByPk($id);
+		
+		$stat = WikiStat::model()->find('wkid=:wkid and operate=:op',array(':wkid'=>$id,':op'=>'pv'));
+		if(empty($stat)){
+			$stat = new WikiStat();
+			$stat->wkid=$id;
+			$stat->count=1;
+			$stat->operate='pv';
+			$stat->save();
+		} else {
+			$stat->count = $stat->count+1;
+			$stat->save();	
+		}
+		
+		
+		
+		
+		$prev = Wiki::model()->findByPk(($id-1));
+		$next = Wiki::model()->findByPk(($id+1));
+		
+		$this->render('wiki',array(
+			'model'=>$model,
+			'stat'=>$stat,
+			'prev'=>$prev,
+			'next'=>$next,
 		));
 	}
 	

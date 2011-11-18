@@ -145,6 +145,7 @@
 				<ul>						
 					<li><a href="/"><b>回到首页</b></a></li>
 					<li><a href="/sitemap"><b>站点地图</b></a></li>
+					<li><a href="/site/login"><b>管理员</b></a></li>
 				</ul>	
 			</div>
 		</div>
