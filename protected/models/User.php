@@ -67,11 +67,11 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'username' => 'Username',
-			'password' => 'Password',
+			'username' => '用户名',
+			'password' => '密码',
 			'email' => 'Email',
-			'create_date' => 'Create Date',
-			'ip' => 'Ip',
+			'create_date' => '创建时间',
+			'ip' => 'IP地址',
 			'mark' => 'Mark',
 		);
 	}

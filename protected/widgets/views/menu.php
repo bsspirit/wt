@@ -6,5 +6,9 @@
 <li><a href="<?php echo $basepath?>/site/consult" <?php if($page=='consult'){echo 'id="current"';}?>>购买咨询</a></li>
 <li><a href="<?php echo $basepath?>/site/message" <?php if($page=='message'){echo 'id="current"';}?>>留言板</a></li>
 <li><a href="<?php echo $basepath?>/site/wikis" <?php if($page=='wiki'){echo 'id="current"';}?>>白茶百科</a></li>
+<?php if(!Yii::app()->user->isGuest){?>
+<li><a href="<?php echo $basepath?>/admin" <?php if($page=='admin'){echo 'id="current"';}?>>管理员</a></li>
+<li><a href="<?php echo $basepath?>/site/logout">退出</a></li>
+<?php }?>
 <!--<li><a href="/about">关于本站</a></li>-->
 </ul>
