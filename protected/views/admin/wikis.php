@@ -1,4 +1,8 @@
 <?php 
+function html($img){
+	return '<img height="80px" src="'.Yii::app()->request->baseUrl.$img.'"/>';
+}
+
 $this->breadcrumbs=array(
 	'后台管理控制台'=>array('/admin/index'),
 	'百科管理',
@@ -9,9 +13,14 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$dataProvider,
 	'columns'=>array(
 		'id',
-		'name',
-		'email',
+		array(
+			'header'=>'图片',
+			'type'=>'HTML',
+			'value'=>'html($data->image)',
+		),
 		'title',
+		//'name',
+		//'email',
 		'create_date',
 		'ip',
 		array(
@@ -28,8 +37,14 @@ $this->widget('zii.widgets.grid.CGridView', array(
         		   	'url'=>'Yii::app()->controller->createUrl("/admin/wikiDelete",array("id"=>$data->id))',
 	            	'imageUrl'=>null,
 	            ),
+	            'pic'=>array(
+		           	'label'=>'图片',	
+        		   	'url'=>'Yii::app()->controller->createUrl("/admin/wikiImage",array("id"=>$data->id))',
+	            	'imageUrl'=>null,
+		      		'options'=>array('target'=>'_blank'),
+	            ),
              ),
-        	'template'=>'{update} {delete}',
+        	'template'=>'{update} {delete} {pic}',
             'htmlOptions'=>array(
 		        'style'=>'width:80px;'
 		    ),
