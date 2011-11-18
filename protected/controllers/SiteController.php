@@ -21,20 +21,53 @@ class SiteController extends Controller
 		);
 	}
 
-	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
+	
+	/*
+	 * 品味白茶
 	 */
-	public function actionIndex()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+	public function actionDrink(){
+		$this->render('drink',array(
+		));
 	}
-
-	/**
-	 * This is the action to handle external exceptions.
+	
+	/*
+	 * 实景照片
 	 */
+	public function actionPhoto(){
+		$this->render('photo',array(
+		));
+	}
+	
+	/*
+	 * 购买咨询
+	 */
+	public function actionConsult(){
+		$this->render('consult',array(
+		));
+	}
+	
+	/*
+	 * 白茶知识库
+	 */
+	public function actionWiki(){
+		$model = new Wiki();
+		$dataProvider = $model->search(30);
+		$this->render('wiki',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+	
+	/*
+	 * 留言板
+	 */
+	public function actionMessage(){
+		$model = new Message();
+		$dataProvider = $model->search(10);
+		$this->render('message',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+	
 	public function actionError()
 	{
 	    if($error=Yii::app()->errorHandler->error)

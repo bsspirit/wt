@@ -11,7 +11,7 @@
 	<meta name="classification" content="白茶" />
 	<meta name="copyright" content="龙仙山安吉高山白茶" />
 	<meta name="Robots" content="all" />
-	<META name="y_key" content="7b3c6d0306a59625" />
+	<meta name="y_key" content="7b3c6d0306a59625" />
 	
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo $basepath ?>/css/screen.css" media="screen, projection" />
@@ -21,6 +21,8 @@
 	<![endif]-->
 	<link rel="stylesheet" type="text/css" href="<?php echo $basepath ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $basepath ?>/css/form.css" />
+	<link href="/favicon.ico" rel="shortcut icon"> 
+	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	<script src="<?php echo $basepath ?>/js/jquery-1.5.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -43,26 +45,19 @@
 			<a href="/" title="安吉高山白茶">龙仙山<span class="gray">安吉白茶</span></a>
 		</h1>	
 		<h2 id="slogan" title="安吉高山白茶">龙仙山 -- 海拔800米，自家千亩茶园，安吉高山白茶</h2>
-		<ul>
-			<li><a href="/" id="current">首页</a></li>
-			<li><a href="/drink">品味白茶</a></li>
-			<li><a href="/photo">实景照片</a></li>
-			<li><a href="/consult">购买咨询</a></li>
-			<li><a href="/message">留言板</a></li>
-			<li><a href="/wiki">白茶知识库</a></li>
-			<!--<li><a href="/about">关于本站</a></li>-->
-		</ul>		
+		<?php $this->widget('application.widgets.menuWidget',array('page'=>$this->page));?>	
 		</div>
 	</div>
 	
+	<?php if($this->page == 'index'){?>
 	<div class="marquee">
-	    <ul>
-	        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header1.jpg"/></a></li>
-	        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header2.jpg"/></a></li>
-	        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header3.jpg"/></a></li>
-	        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header4.jpg"/></a></li>
-	    </ul>
-	</div>
+    <ul>
+        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header1.jpg"/></a></li>
+        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header2.jpg"/></a></li>
+        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header3.jpg"/></a></li>
+        <li><a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header4.jpg"/></a></li>
+    </ul>
+    </div>
 	<script src="<?php echo $basepath ?>/js/flash/jcarousellite_1.0.1.pack.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(function() {
@@ -73,22 +68,27 @@
 		    });
 		});
 	</script>
+	<?php } else { ?>
+	<div class="marquee">
+	    <a href="#"><img class="headerphoto" src="<?php echo $basepath ?>/css/header1.jpg"/></a>
+    </div>
+	<?php } ?>
 	
 	<div id="content-wrap">
 		<div id="content">
 			<div id="sidebar" >
 				<div class="sidebox">
 					<h1>业务咨询</h1>
+					<p><b>安吉联系人</b><br/>
+					陈小英: 15088374733<br/>
+					QQ: 664750263<br/>
+					</p>
+					
 					<p><b>北京联系人</b><br/>
 					张丹: 18611314197<br/>
 					QQ: 86152615<br/>
 					E-mail: bsspirit@gmail.com<br/>
 					</p>
-					
-					<p><b>安吉联系人</b><br/>
-					陈小英: 15088374733<br/>
-					QQ: 664750263<br/>
-					</p>	
 				</div>
 
 				<div class="sidebox">	

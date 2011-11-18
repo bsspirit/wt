@@ -1,6 +1,7 @@
 <?php 
 $basepath=Yii::app()->request->baseUrl;
 $this->pageTitle=Yii::app()->name . ' - 首页';
+$this->page = 'index';
 ?> 
 
 <div class="post">

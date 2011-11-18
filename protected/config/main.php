@@ -2,19 +2,21 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'龙仙山安吉白茶',
+	'language'=>'zh_cn',
 	'preload'=>array('log'),
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.widgets.*',
 	),
 	'defaultController' => 'default',
-	'modules'=>array(
-		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
-			'password'=>'gii',
-			'ipFilters'=>array('127.0.0.1','::1'),
-		),
-	),
+//	'modules'=>array(
+//		'gii'=>array(
+//			'class'=>'system.gii.GiiModule',
+//			'password'=>'gii',
+//			'ipFilters'=>array('127.0.0.1','::1'),
+//		),
+//	),
 	'components'=>array(
 		'user'=>array(
 			'allowAutoLogin'=>true,
@@ -44,9 +46,9 @@ return array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
 				),
-				array(
-					'class'=>'CWebLogRoute',
-				),
+//				array(
+//					'class'=>'CWebLogRoute',
+//				),
 			),
 		),
 	),
