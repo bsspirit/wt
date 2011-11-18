@@ -77,6 +77,7 @@ class SiteController extends Controller
 		}
 		
 		$model=new Message();
+		$model->name=null;
 		$dataProvider = $model->search(10);
 		$this->render('message',array(
 			'dataProvider'=>$dataProvider,
