@@ -1,4 +1,6 @@
 <?php 
+$this->pageTitle=Yii::app()->name . ' - 留言板管理';
+$this->page='admin';
 $this->breadcrumbs=array(
 	'后台管理控制台'=>array('/admin/index'),
 	'留言板管理',

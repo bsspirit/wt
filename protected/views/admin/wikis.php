@@ -3,6 +3,8 @@ function html($img){
 	return '<img height="80px" src="'.Yii::app()->request->baseUrl.$img.'"/>';
 }
 
+$this->pageTitle=Yii::app()->name . ' - 百科管理';
+$this->page='admin';
 $this->breadcrumbs=array(
 	'后台管理控制台'=>array('/admin/index'),
 	'百科管理',
@@ -16,7 +18,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		array(
 			'header'=>'图片',
 			'type'=>'HTML',
-			'value'=>'html($data->image)',
+			'value'=>'empty($data->image)?"":html($data->image)',
 		),
 		'title',
 		//'name',
@@ -27,6 +29,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'class'=>'CButtonColumn',
 			'header'=>'操作',
 			'buttons'=>array(
+				'view'=>array(
+		           	'label'=>'详细',	
+        		   	'url'=>'Yii::app()->controller->createUrl("/site/wiki",array("id"=>$data->id))',
+	            	'imageUrl'=>null,
+	            	'options'=>array('target'=>'_blank'),
+	            ),
 				'update'=>array(
 		           	'label'=>'修改',	
         		   	'url'=>'Yii::app()->controller->createUrl("/admin/wikiUpdate",array("id"=>$data->id))',
@@ -44,9 +52,9 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		      		'options'=>array('target'=>'_blank'),
 	            ),
              ),
-        	'template'=>'{update} {delete} {pic}',
+        	'template'=>'{view} {update} {delete} {pic}',
             'htmlOptions'=>array(
-		        'style'=>'width:80px;'
+		        'style'=>'width:110px;',
 		    ),
 		)
 	),
