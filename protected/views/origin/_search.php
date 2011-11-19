@@ -11,18 +11,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'wkid'); ?>
-		<?php echo $form->textField($model,'wkid'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'count'); ?>
-		<?php echo $form->textField($model,'count'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'operate'); ?>
-		<?php echo $form->textField($model,'operate',array('size'=>8,'maxlength'=>8)); ?>
+		<?php echo $form->label($model,'name'); ?>
+		<?php echo $form->textField($model,'name',array('size'=>32,'maxlength'=>32)); ?>
 	</div>
 
 	<div class="row buttons">

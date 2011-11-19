@@ -11,13 +11,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>16,'maxlength'=>16)); ?>
+		<?php echo $form->label($model,'oid'); ?>
+		<?php echo $form->textField($model,'oid'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>64)); ?>
+		<?php echo $form->label($model,'origin_url'); ?>
+		<?php echo $form->textField($model,'origin_url',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'image'); ?>
+		<?php echo $form->textField($model,'image',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'title'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>128)); ?>
 	</div>
 
 	<div class="row">
@@ -31,13 +41,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'ip'); ?>
-		<?php echo $form->textField($model,'ip',array('size'=>32,'maxlength'=>32)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'mark'); ?>
-		<?php echo $form->textField($model,'mark'); ?>
+		<?php echo $form->label($model,'state'); ?>
+		<?php echo $form->textField($model,'state'); ?>
 	</div>
 
 	<div class="row buttons">

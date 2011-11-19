@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'Wikis'=>array('index'),
+	'Origins'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List Wiki', 'url'=>array('index')),
-	array('label'=>'Create Wiki', 'url'=>array('create')),
+	array('label'=>'List Origin', 'url'=>array('index')),
+	array('label'=>'Create Origin', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -15,7 +15,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('wiki-grid', {
+	$.fn.yiiGridView.update('origin-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -23,7 +23,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Wikis</h1>
+<h1>Manage Origins</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -38,22 +38,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'wiki-grid',
+	'id'=>'origin-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
 		'name',
-		'email',
-		'title',
-		'content',
-		'image',
-		/*
-		'repost',
-		'create_date',
-		'ip',
-		'mark',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

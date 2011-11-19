@@ -43,3 +43,23 @@ CREATE TABLE t_tea_wiki_stat (
   operate varchar(8) DEFAULT 'pv',
   PRIMARY KEY (id)
 ) ENGINE=InnoDB CHARSET=utf8;
+
+
+CREATE TABLE t_data_origin (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(32) NOT NULL UNIQUE,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB CHARSET=utf8;
+
+CREATE TABLE t_data_store (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  oid int(11) NOT NULL,
+  origin_url varchar(256) NULL,
+  origin_date int(8) NULL,
+  image varchar(256) NULL,
+  title varchar(128) NOT NULL,
+  content text NOT NULL,
+  create_date timestamp DEFAULT now(),
+  state int(1) default 0,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB CHARSET=utf8;

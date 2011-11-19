@@ -10,7 +10,7 @@ $this->page = 'wiki';
 	<p>原文地址: <a href="<?php echo $model->repost?>" title="<?php echo $model->title?>" alt="<?php echo $model->title?>" target="_blank"><?php echo $model->repost?></a></p>
 	<?php }?>
 	<?php if(!empty($model->image)){ ?>
-	<p><img width="550px" src="<?php echo $model->image?>" alt="安吉高山白茶" title="安吉高山白茶"/></p>
+	<p><img onload="if(this.width>550) {this.width=550;}" src="<?php echo $model->image?>" alt="安吉高山白茶" title="安吉高山白茶"/></p>
 	<?php }?>
 	<br/>
 	<p><?php echo $model->content?></p>
