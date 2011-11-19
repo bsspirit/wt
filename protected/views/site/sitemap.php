@@ -17,5 +17,12 @@ $this->page = 'sitemap';
 		<a href="/site/wiki" title="白茶知识库" alt="安吉高山白茶">白茶知识库</a>&nbsp;|
 		<a href="/site/login" title="管理员登陆" alt="安吉高山白茶">管理员登陆</a>
 	</p>
+	
+	<h2>白茶百科</h2>
+	<p>
+		<?php foreach($dataProvider->getData() as $row){?>
+			<a href="/site/wiki/<?php echo $row->id?>" title="<?php echo $row->title?>" alt="安吉高山白茶"><?php echo $row->title?></a>&nbsp;| 
+		<?php }?>
+	</p>
 
 </div>

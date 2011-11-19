@@ -89,7 +89,9 @@ class SiteController extends Controller
 	 * 站点地图
 	 */
 	public function actionSitemap(){
+		$dataProvider=Wiki::model()->search(20);
 		$this->render('sitemap',array(
+			'dataProvider'=>$dataProvider,
 		));
 	}
 	
