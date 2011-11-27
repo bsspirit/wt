@@ -26,6 +26,8 @@
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	<script src="<?php echo $basepath ?>/js/jquery-1.5.1.min.js" type="text/javascript"></script>
 	<script src="<?php echo $basepath ?>/js/main.js" type="text/javascript"></script>
+	
+	<?php if(Yii::app()->user->isGuest){ ?>
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-22898039-1']);
@@ -36,6 +38,7 @@
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 	</script>
+	<?php } ?>
 </head>
 
 <body path="<?php echo $basepath ?>">
@@ -112,10 +115,12 @@
 		</div>
 	</div>
 </div>
+<?php if(Yii::app()->user->isGuest){ ?>
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F73066f01ddffe5e080675486cb79a450' type='text/javascript'%3E%3C/script%3E"));
 </script>
+<?php } ?>
 
 </body>
 </html>
